@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { siteContent } from "../site-content";
 
@@ -10,7 +11,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="container header-inner">
         <a className="brand" href="#top" aria-label="360 Scholar Research & Learning home">
-          <span className="brand-mark" aria-hidden="true">360</span>
+          <Image src="/360scholar-mark.svg" alt="" width={44} height={44} className="brand-mark" />
           <span className="brand-copy">
             <strong><span>{siteContent.brand.first}</span><span>{siteContent.brand.second}</span></strong>
             <small>{siteContent.brand.division}</small>

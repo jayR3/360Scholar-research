@@ -1,0 +1,20 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">360Scholar mark</title>
+  <desc id="desc">A premium navy and teal academic publishing emblem with a circular scholar orbit, open book, and global meridian lines.</desc>
+  <rect width="512" height="512" rx="96" fill="#0B1F3A"/>
+  <circle cx="256" cy="256" r="156" stroke="#E7ECF2" stroke-width="18"/>
+  <path d="M132 256C132 187.517 187.517 132 256 132C324.483 132 380 187.517 380 256" stroke="#0E8A8A" stroke-width="18" stroke-linecap="round"/>
+  <path d="M256 103C294 145 313 196 313 256C313 316 294 367 256 409C218 367 199 316 199 256C199 196 218 145 256 103Z" stroke="#E7ECF2" stroke-width="13" stroke-linejoin="round"/>
+  <path d="M116 256H396" stroke="#E7ECF2" stroke-width="13" stroke-linecap="round"/>
+  <path d="M146 194H366" stroke="#E7ECF2" stroke-width="11" stroke-linecap="round" opacity=".72"/>
+  <path d="M146 318H366" stroke="#E7ECF2" stroke-width="11" stroke-linecap="round" opacity=".72"/>
+  <path d="M162 214C192 203 222 207 256 231V356C224 333 194 328 162 339V214Z" fill="#FFFFFF"/>
+  <path d="M350 214C320 203 290 207 256 231V356C288 333 318 328 350 339V214Z" fill="#FFFFFF"/>
+  <path d="M256 231V356" stroke="#0B1F3A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M183 242C204 237 224 241 242 253" stroke="#0B1F3A" stroke-width="8" stroke-linecap="round" opacity=".52"/>
+  <path d="M183 272C204 267 224 271 242 283" stroke="#0B1F3A" stroke-width="8" stroke-linecap="round" opacity=".52"/>
+  <path d="M329 242C308 237 288 241 270 253" stroke="#0B1F3A" stroke-width="8" stroke-linecap="round" opacity=".52"/>
+  <path d="M329 272C308 267 288 271 270 283" stroke="#0B1F3A" stroke-width="8" stroke-linecap="round" opacity=".52"/>
+  <circle cx="382" cy="142" r="22" fill="#0E8A8A"/>
+  <circle cx="382" cy="142" r="10" fill="#FFFFFF"/>
+</svg>

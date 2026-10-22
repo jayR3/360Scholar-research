@@ -9,11 +9,12 @@ export function EnquiryForm() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
-    const subject = `Research support enquiry — ${String(form.get("support-type") ?? "")}`;
+    const supportArea = String(form.get("support-type") || "Not sure yet");
+    const subject = `Academic coaching enquiry — ${supportArea}`;
     const body = [
       `Name: ${String(form.get("name") ?? "")}`,
       `Email: ${String(form.get("email") ?? "")}`,
-      `Support area: ${String(form.get("support-type") ?? "")}`,
+      `Support area: ${supportArea}`,
       "",
       `Goals:\n${String(form.get("message") || "Not provided")}`
     ].join("\n");
@@ -29,7 +30,7 @@ export function EnquiryForm() {
       <label htmlFor="email">{siteContent.form.emailLabel}</label>
       <input id="email" name="email" type="email" autoComplete="email" placeholder={siteContent.form.emailPlaceholder} required />
       <label htmlFor="support-type">{siteContent.form.supportLabel}</label>
-      <select id="support-type" name="support-type" required defaultValue="">
+      <select id="support-type" name="support-type" defaultValue="">
         <option value="" disabled>{siteContent.form.supportPlaceholder}</option>
         {siteContent.form.options.map((option) => <option key={option}>{option}</option>)}
       </select>
@@ -40,7 +41,12 @@ export function EnquiryForm() {
       <button type="submit" className="button button-primary button-submit">
         {siteContent.form.submit} <span aria-hidden="true">↗</span>
       </button>
-      <p className="form-status" aria-live="polite">{status || siteContent.form.privacyNote}</p>
+      <p className="form-status" aria-live="polite">
+        {status || siteContent.form.privacyNote} {" "}
+        <a href={`mailto:${siteContent.contact.email}?subject=Academic%20coaching%20enquiry`}>
+          {siteContent.form.directEmailLabel}
+        </a>
+      </p>
     </form>
   );
 }

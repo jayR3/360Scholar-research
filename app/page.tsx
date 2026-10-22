@@ -22,6 +22,7 @@ export default function HomePage() {
                 <a className="button button-primary" href="#contact">{siteContent.hero.primaryCta} <span aria-hidden="true">↗</span></a>
                 <a className="text-link" href="#support">{siteContent.hero.secondaryCta} <span aria-hidden="true">↓</span></a>
               </div>
+              <p className="hero-cta-hint">{siteContent.hero.ctaHint}</p>
               <div className="hero-points" aria-label="Our principles">
                 <span><i aria-hidden="true">✓</i> {siteContent.hero.pointOne}</span>
                 <span><i aria-hidden="true">✓</i> {siteContent.hero.pointTwo}</span>
@@ -161,7 +162,7 @@ export default function HomePage() {
       <footer className="site-footer">
         <div className="container footer-main">
           <a className="brand brand-footer" href="#top" aria-label="360 Scholar Research & Learning home">
-            <span className="brand-mark" aria-hidden="true">360</span>
+            <Image src="/360scholar-mark.svg" alt="" width={38} height={38} className="brand-mark" />
             <span className="brand-copy"><strong><span>{siteContent.brand.first}</span><span>{siteContent.brand.second}</span></strong><small>{siteContent.brand.division}</small></span>
           </a>
           <p>{siteContent.footer.tagline}</p>

@@ -4,9 +4,9 @@
  */
 export const siteContent = {
   seo: {
-    title: "Research & Learning Support | 360 Scholar",
+    title: "Academic Coaching for Ambitious Students | 360 Scholar",
     description:
-      "Thoughtful, one-to-one academic guidance for every stage of your research journey."
+      "One-to-one academic coaching, research guidance and focused feedback for students with ambitious goals across every discipline."
   },
   brand: {
     first: "360",
@@ -14,9 +14,9 @@ export const siteContent = {
     division: "Research & learning"
   },
   theme: {
-    ink: "#173a3a",
-    brand: "#183a3a",
-    teal: "#2f7770",
+    ink: "#0b1f3a",
+    brand: "#0b1f3a",
+    teal: "#0e8a8a",
     accent: "#d5ae66",
     paper: "#f6f4ed",
     white: "#ffffff"
@@ -34,35 +34,36 @@ export const siteContent = {
     approach: "How it works",
     faq: "FAQs",
     publishing: "Publishing",
-    cta: "Talk to an advisor"
+    cta: "Get started"
   },
   hero: {
-    kicker: "360 SCHOLAR · RESEARCH & LEARNING",
-    title: "Good research begins with a clear next step.",
+    kicker: "ACADEMIC COACHING · EVERY DISCIPLINE",
+    title: "Aim higher. Make your next submission your strongest.",
     description:
-      "Thoughtful, one-to-one guidance for every stage of your academic journey—from shaping a research question to making sense of your findings and refining your writing.",
-    primaryCta: "Start a conversation",
+      "One-to-one academic coaching for ambitious students in every field. Turn your brief and rubric into a sharper plan, strengthen your analysis and submit work that shows what you can do—from coursework to dissertation.",
+    primaryCta: "Get a tailored plan",
     secondaryCta: "Explore our support",
-    pointOne: "Guidance that puts you first",
-    pointTwo: "Your work stays yours",
-    noteTitle: "Clear thinking.",
-    noteSubtitle: "Confident progress.",
+    ctaHint: "Share your subject, goal and deadline. We’ll help you plan the next best step.",
+    pointOne: "Support across all disciplines",
+    pointTwo: "Your work. Your achievement.",
+    noteTitle: "Aiming higher.",
+    noteSubtitle: "A clear plan for stronger work.",
     imageCaption: "Built around your goals, your pace and your voice.",
     imageAlt:
       "A researcher working thoughtfully at a laptop in a bright university library",
-    bottomOne: "Thoughtful academic support",
-    bottomTwo: "For every stage of the research journey",
-    bottomThree: "Online, wherever you study"
+    bottomOne: "All subjects, all study levels",
+    bottomTwo: "Guidance built around your rubric",
+    bottomThree: "Your strongest work stays yours"
   },
   support: {
     kicker: "How we can help",
     title: "Focused guidance for the work",
     emphasis: "only you can do.",
     description:
-      "From an early idea to a final draft, get practical support that helps you move forward with more clarity and confidence.",
-    integrityTitle: "Your research. Your authorship.",
+      "Whether you’re tackling coursework, planning research or refining a dissertation, get focused coaching to understand expectations and improve your own work.",
+    integrityTitle: "Ambitious goals. Your authorship.",
     integrityDescription:
-      "We coach, guide and review; you remain the author of your ideas and assessed work.",
+      "We coach, guide and review; you remain the author of every idea and assessed submission.",
     integrityLink: "Our approach"
   },
   approach: {
@@ -113,10 +114,10 @@ export const siteContent = {
   },
   contact: {
     kicker: "Let's talk about your goals",
-    title: "One good conversation can change your direction.",
+    title: "A stronger result starts with a clearer next step.",
     description:
-      "Share a little about the stage you are at. We will help you identify the kind of support that could make a difference.",
-    promise: "No pressure. Just a clear next step.",
+      "Tell us your subject, goal and deadline. We’ll recommend focused coaching and feedback for your brief and rubric, whatever you’re studying.",
+    promise: "A clear plan. Your work stays yours.",
     email: "support@360scholar.org"
   },
   form: {
@@ -125,23 +126,24 @@ export const siteContent = {
     emailLabel: "Email address",
     emailPlaceholder: "you@example.com",
     supportLabel: "What would you like help with?",
-    supportPlaceholder: "Select an area",
+    supportPlaceholder: "Not sure yet",
     options: [
+      "Coursework & assessment planning",
       "Research planning",
       "Methods or data analysis",
-      "Writing or editing guidance",
-      "Thesis or dissertation coaching",
-      "Something else"
+      "Academic writing feedback",
+      "Thesis or dissertation coaching"
     ],
     messageLabel: "A little more about your goals",
     optionalLabel: "(optional)",
     messagePlaceholder: "What would you like to make progress on?",
-    submit: "Send your enquiry",
+    submit: "Get my tailored plan",
     privacyNote:
-      "Your email app will open with your enquiry ready to send. This preview does not store form data."
+      "This opens your email app with your enquiry ready to send. The site does not store your details.",
+    directEmailLabel: "Prefer email? Write to us directly."
   },
   footer: {
-    tagline: "Thoughtful guidance for the next generation of research.",
+    tagline: "Ambitious goals. Clearer next steps.",
     publishingLink: "Explore scholarly publishing",
     copyright: "360 Scholar. All rights reserved.",
     note: "Research support that keeps your voice at the centre."
@@ -149,11 +151,11 @@ export const siteContent = {
   services: [
     {
       number: "01",
-      tag: "START WITH CLARITY",
-      title: "Research direction",
+      tag: "START WITH YOUR BRIEF",
+      title: "Coursework & assessment strategy",
       description:
-        "Shape a focused topic, a workable research question and a plan that feels manageable.",
-      detail: "Topic · questions · scope"
+        "Break down your brief and rubric, map a clear approach and focus your effort on the strongest parts of your argument.",
+      detail: "Brief · criteria · plan"
     },
     {
       number: "02",
@@ -166,9 +168,9 @@ export const siteContent = {
     {
       number: "03",
       tag: "STRENGTHEN YOUR WRITING",
-      title: "Academic writing & editing",
+      title: "Academic writing feedback",
       description:
-        "Improve structure, clarity, referencing and flow while keeping your own argument and voice.",
+        "Refine structure, clarity, referencing and flow through feedback that keeps your argument and voice your own.",
       detail: "Structure · style · references"
     },
     {
@@ -176,8 +178,8 @@ export const siteContent = {
       tag: "KEEP YOUR MOMENTUM",
       title: "Thesis & dissertation coaching",
       description:
-        "Break a large project into achievable milestones and stay focused through each stage.",
-      detail: "Planning · feedback · progress"
+        "Set achievable milestones, strengthen each chapter and build confidence from proposal to final draft—all while you remain the author.",
+      detail: "Planning · chapter feedback · progress"
     }
   ],
   steps: [

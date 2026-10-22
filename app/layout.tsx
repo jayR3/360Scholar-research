@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: siteContent.seo.title,
     description: siteContent.seo.description
   },
-  icons: { icon: "/favicon.svg" }
+  icons: { icon: "/360scholar-mark.svg" }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
