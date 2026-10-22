@@ -144,7 +144,7 @@ export const siteContent = {
     messagePlaceholder: "What would you like to make progress on?",
     submit: "Get my tailored plan",
     privacyNote:
-      "This page does not create an account or store your details. The button prepares an email; your enquiry is sent only if you choose to send it. Session requests are confirmed by email, not booked automatically.",
+      "Your enquiry form does not create an account or store details on this site. It prepares an email that is sent only if you choose. Chat is provided by Tidio; see the privacy notice below. Session requests are confirmed by email, not booked automatically.",
     directEmailLabel: "Prefer email? Write to us directly."
   },
   footer: {

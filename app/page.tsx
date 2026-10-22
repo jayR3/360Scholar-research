@@ -174,6 +174,10 @@ export default function HomePage() {
           <span>© {new Date().getFullYear()} {siteContent.footer.copyright}</span>
           <span className="footer-note">{siteContent.footer.note}</span>
         </div>
+        <div className="container footer-chat-privacy">
+          Live chat is provided by Tidio. Information you share in chat and related interaction data may be processed by Tidio.{" "}
+          <a href="https://www.tidio.com/privacy-policy/" target="_blank" rel="noreferrer">Read Tidio&apos;s privacy policy</a>.
+        </div>
       </footer>
     </>
   );
