@@ -20,7 +20,7 @@ export function EnquiryForm() {
     ].join("\n");
 
     window.location.href = `mailto:${encodeURIComponent(siteContent.contact.email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setStatus("Your email app will open with your enquiry ready to send.");
+    setStatus("Your email app will open. Send the prepared email and we’ll reply with a time or next step.");
   }
 
   return (
@@ -50,3 +50,4 @@ export function EnquiryForm() {
     </form>
   );
 }
+

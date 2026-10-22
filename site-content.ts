@@ -22,12 +22,16 @@ export const siteContent = {
     white: "#ffffff"
   },
   promo: {
-    enabled: false,
-    label: "A little something to get started",
-    message: "Save 15% on your first research consultation.",
-    code: "FIRST15",
-    linkText: "Enquire today",
-    endDate: ""
+    enabled: true,
+    label: "1:1 advice sessions",
+    freeUntil: "2026-12-01T00:00:00Z",
+    freeDurationMinutes: 15,
+    freeMessage: "Free {duration}-minute one-to-one advice sessions are available through {date}.",
+    freeLinkText: "Request your free session",
+    hourlyRateGBP: 10,
+    paidMessage:
+      "From {date}, one-to-one advice sessions start at £{rate} per hour. If you find no value in a paid conversation, we promise an immediate 50% refund.",
+    paidLinkText: "Request a session"
   },
   nav: {
     support: "Our support",
@@ -40,11 +44,11 @@ export const siteContent = {
     kicker: "ACADEMIC COACHING · EVERY DISCIPLINE",
     title: "Aim higher. Submit your strongest work.",
     description:
-      "One-to-one academic coaching for ambitious students in every field. Turn your brief and rubric into a sharper plan, strengthen your analysis and submit work that shows what you can do—from coursework to dissertation.",
+      "One-to-one academic coaching for ambitious students in every field. Turn your brief and rubric into a sharper plan, strengthen your analysis and submit work that shows what you can do—from coursework to dissertation. We also help you understand AI-use rules, use sources accurately, catch spelling errors and move beyond description into critical analysis.",
     primaryCta: "Get a tailored plan",
     secondaryCta: "Explore our support",
     ctaHint: "Share your subject, goal and deadline. We’ll help you plan the next best step.",
-    pointOne: "Support across all disciplines",
+    pointOne: "10+ years supporting academic progress",
     pointTwo: "Your work. Your achievement.",
     noteTitle: "Aiming higher.",
     noteSubtitle: "A clear plan for stronger work.",
@@ -58,12 +62,12 @@ export const siteContent = {
   support: {
     kicker: "How we can help",
     title: "Focused guidance for the work",
-    emphasis: "only you can do.",
+    emphasis: "that stays yours.",
     description:
-      "Whether you’re tackling coursework, planning research or refining a dissertation, get focused coaching to understand expectations and improve your own work.",
-    integrityTitle: "Ambitious goals. Your authorship.",
+      "From interpreting briefs and moving beyond description to checking spelling, using sources accurately and understanding your institution’s rules on AI and attribution, we help you strengthen the work you author.",
+    integrityTitle: "Academic integrity comes first.",
     integrityDescription:
-      "We coach, guide and review; you remain the author of every idea and assessed submission.",
+      "We help you understand and follow your institution’s rules on AI tools, collaboration, attribution and editing. You remain the author of every idea and assessed submission.",
     integrityLink: "Our approach"
   },
   approach: {
@@ -116,8 +120,8 @@ export const siteContent = {
     kicker: "Let's talk about your goals",
     title: "A stronger result starts with a clearer next step.",
     description:
-      "Tell us your subject, goal and deadline. We’ll recommend focused coaching and feedback for your brief and rubric, whatever you’re studying.",
-    promise: "A clear plan. Your work stays yours.",
+      "Tell us what you’re studying and where you’re stuck—source use, AI rules, spelling or critical analysis. We’ll suggest a practical next step for your own work.",
+    promise: "Over a decade of support. Your progress and academic integrity come first.",
     email: "support@360scholar.org"
   },
   form: {
@@ -132,14 +136,15 @@ export const siteContent = {
       "Research planning",
       "Methods or data analysis",
       "Academic writing feedback",
-      "Thesis or dissertation coaching"
+      "Thesis or dissertation coaching",
+      "1:1 advice session request"
     ],
     messageLabel: "A little more about your goals",
     optionalLabel: "(optional)",
     messagePlaceholder: "What would you like to make progress on?",
     submit: "Get my tailored plan",
     privacyNote:
-      "This opens your email app with your enquiry ready to send. The site does not store your details.",
+      "This page does not create an account or store your details. The button prepares an email; your enquiry is sent only if you choose to send it. Session requests are confirmed by email, not booked automatically.",
     directEmailLabel: "Prefer email? Write to us directly."
   },
   footer: {
@@ -154,7 +159,7 @@ export const siteContent = {
       tag: "START WITH YOUR BRIEF",
       title: "Coursework & assessment strategy",
       description:
-        "Break down your brief and rubric, map a clear approach and focus your effort on the strongest parts of your argument.",
+        "Break down your brief and rubric, map your work to the marking criteria and plan a clear argument with accurate source use.",
       detail: "Brief · criteria · plan"
     },
     {
@@ -170,8 +175,8 @@ export const siteContent = {
       tag: "STRENGTHEN YOUR WRITING",
       title: "Academic writing feedback",
       description:
-        "Refine structure, clarity, referencing and flow through feedback that keeps your argument and voice your own.",
-      detail: "Structure · style · references"
+        "Move beyond description into critical analysis. Improve structure, clarity, spelling and citation accuracy while keeping your argument and voice your own.",
+      detail: "Analysis · spelling · references"
     },
     {
       number: "04",
@@ -191,15 +196,15 @@ export const siteContent = {
     },
     {
       number: "02",
-      title: "Agree a useful plan",
+      title: "Get a clear recommendation",
       description:
-        "We will identify a focused session or support plan shaped around your needs."
+        "We’ll suggest a focused session or support option for your goals. You choose whether to proceed."
     },
     {
       number: "03",
-      title: "Move forward with clarity",
+      title: "Leave with clear next steps",
       description:
-        "Leave with practical next steps you can apply to your own research."
+        "Take away practical actions you can apply to your own research or assessment."
     }
   ],
   faqs: [
@@ -221,7 +226,18 @@ export const siteContent = {
     {
       question: "How do online sessions work?",
       answer:
-        "Sessions are arranged around your goals and availability. Get in touch to talk through the format, timing and level of support you need."
+        "Request a free 15-minute one-to-one advice session through 30 November 2026. After that, sessions start at £10 per hour. We’ll confirm an available time by email. If you find no value in a paid conversation, we promise an immediate 50% refund."
+    },
+    {
+      question: "I’m worried about AI or plagiarism offences. Can you help?",
+      answer:
+        "Yes. We can help you understand your institution’s AI and source-use rules, cite and paraphrase carefully, and strengthen your own analysis. We cannot promise a detector outcome or disguise copied or prohibited AI-generated work."
+    },
+    {
+      question: "Can you guarantee I will pass or get a particular grade?",
+      answer:
+        "No one can guarantee a mark: your institution assesses your work. We can help you understand the criteria, improve your approach and catch avoidable issues, while you remain the author of what you submit."
     }
   ]
 } as const;
+
