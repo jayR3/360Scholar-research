@@ -38,7 +38,7 @@ export const siteContent = {
   },
   hero: {
     kicker: "ACADEMIC COACHING · EVERY DISCIPLINE",
-    title: "Aim higher. Make your next submission your strongest.",
+    title: "Aim higher. Submit your strongest work.",
     description:
       "One-to-one academic coaching for ambitious students in every field. Turn your brief and rubric into a sharper plan, strengthen your analysis and submit work that shows what you can do—from coursework to dissertation.",
     primaryCta: "Get a tailored plan",
