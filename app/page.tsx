@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { EnquiryForm } from "../components/enquiry-form";
+import { HeroPromiseStrip } from "../components/hero-promise-strip";
 import { PromoBanner } from "../components/promo-banner";
 import { SiteHeader } from "../components/site-header";
 import { SupportFinder } from "../components/support-finder";
@@ -48,11 +49,7 @@ export default function HomePage() {
               <div className="image-caption"><span className="caption-dot"></span>{siteContent.hero.imageCaption}</div>
             </div>
           </div>
-          <div className="hero-bottom container" aria-label="Our approach">
-            <span className="hero-promise-item">{siteContent.hero.bottomOne}</span>
-            <span className="hero-promise-item">{siteContent.hero.bottomTwo}</span>
-            <span className="hero-promise-item">{siteContent.hero.bottomThree}</span>
-          </div>
+          <HeroPromiseStrip items={[siteContent.hero.bottomOne, siteContent.hero.bottomTwo, siteContent.hero.bottomThree]} />
         </section>
 
         <section className="intro-section section-pad" id="support">
