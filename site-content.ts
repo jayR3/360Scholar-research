@@ -37,7 +37,7 @@ export const siteContent = {
     support: "Our support",
     approach: "How it works",
     faq: "FAQs",
-    publishing: "Publishing",
+    publishing: "Publish with us",
     cta: "Get started"
   },
   hero: {
