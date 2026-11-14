@@ -87,7 +87,8 @@ h1 { max-width: 600px; margin-bottom: 22px; color: var(--brand); font-size: clam
 .note-arrow { margin-left: auto; color: var(--teal); }
 .image-caption { position: absolute; bottom: 21px; left: 25px; display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.93); font-size: 10px; }
 .caption-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-.hero-bottom { display: flex; align-items: center; justify-content: center; gap: 22px; margin-top: 40px; color: #697874; font-size: 10px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.hero-bottom { display: flex; align-items: center; justify-content: center; gap: 22px; margin-top: 40px; color: #4f605b; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.hero-bottom span:nth-child(3) { color: var(--brand); font-size: 12px; font-weight: 700; }
 .hero-bottom-line { width: 32px; height: 1px; background: #c9d1ca; }
 
 .intro-section { background: #fff; }
@@ -104,14 +105,15 @@ h1 { max-width: 600px; margin-bottom: 22px; color: var(--brand); font-size: clam
 .service-number, .arm-index { color: #82918c; font-family: var(--display); font-size: 12px; font-weight: 700; }
 .service-tag { color: #818f89; font-size: 8px; font-weight: 700; letter-spacing: .11em; text-align: right; }
 .service-glyph { display: grid; place-items: center; width: 43px; height: 43px; margin-top: 38px; border: 1px solid #dce4df; border-radius: 50%; color: var(--teal); font-size: 19px; }
-.service-card h3 { margin: 17px 0 10px; color: var(--brand); font-size: 19px; font-weight: 600; letter-spacing: -.04em; line-height: 1.25; }
-.service-card p { min-height: 66px; margin-bottom: 20px; color: #697874; font-size: 12px; line-height: 1.8; }
+.service-card h3 { margin: 17px 0 10px; color: var(--brand); font-size: 20px; font-weight: 600; letter-spacing: -.04em; line-height: 1.25; }
+.service-card:nth-child(2) h3 { font-size: 21px; font-weight: 700; }
+.service-card p { min-height: 66px; margin-bottom: 20px; color: #52625d; font-size: 13px; font-weight: 500; line-height: 1.75; }
 .service-detail { display: flex; justify-content: space-between; align-items: center; padding-top: 13px; border-top: 1px solid var(--line); color: var(--teal); font-size: 10px; font-weight: 700; }
 .integrity-note { display: flex; align-items: center; gap: 15px; margin-top: 24px; padding: 18px 21px; background: var(--paper); }
 .integrity-icon { color: var(--teal); font-size: 18px; }
-.integrity-note p { flex: 1; margin: 0; color: #687975; font-size: 11px; }
+.integrity-note p { flex: 1; margin: 0; color: #52625d; font-size: 12px; font-weight: 500; line-height: 1.65; }
 .integrity-note p strong { color: var(--brand); }
-.integrity-note .text-link { flex-shrink: 0; font-size: 11px; }
+.integrity-note .text-link { flex-shrink: 0; font-size: 12px; }
 
 .approach-section { color: var(--white); background: var(--brand); }
 .approach-layout { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 110px; }
@@ -194,7 +196,7 @@ h1 { max-width: 600px; margin-bottom: 22px; color: var(--brand); font-size: clam
   .primary-nav { gap: 19px; }
   .hero-grid { grid-template-columns: .9fr 1.1fr; gap: 35px; }
   .hero-visual { min-height: 480px; }
-  .hero-bottom { gap: 14px; font-size: 9px; }
+  .hero-bottom { gap: 14px; font-size: 10px; }
   .heading-split { gap: 50px; }
   .service-card { padding-inline: 17px; }
   .service-tag { font-size: 7px; }
@@ -224,7 +226,7 @@ h1 { max-width: 600px; margin-bottom: 22px; color: var(--brand); font-size: clam
   .hero-visual { min-height: min(112vw, 490px); border-top-right-radius: 95px; }
   .hero-note { right: 14px; bottom: 51px; min-width: 222px; padding: 13px; }
   .image-caption { bottom: 17px; left: 15px; font-size: 9px; }
-  .hero-bottom { justify-content: flex-start; flex-wrap: wrap; gap: 8px 10px; margin-top: 24px; font-size: 8px; }
+  .hero-bottom { justify-content: flex-start; flex-wrap: wrap; gap: 8px 10px; margin-top: 24px; font-size: 9px; }
   .hero-bottom-line { width: 17px; }
   .heading-split, .approach-layout, .faq-layout, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
   .section-heading { margin-bottom: 33px; }
