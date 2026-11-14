@@ -38,6 +38,7 @@ export const siteContent = {
     approach: "How it works",
     faq: "FAQs",
     publishing: "Publish with us",
+    pricing: "Pricing",
     cta: "Get started"
   },
   hero: {
@@ -48,7 +49,7 @@ export const siteContent = {
     primaryCta: "Get a tailored plan",
     secondaryCta: "Explore our support",
     ctaHint: "Share your subject, goal and deadline. We’ll help you plan the next best step.",
-    pointOne: "10+ years supporting academic progress",
+    pointOne: "15 years supporting academic progress",
     pointTwo: "Your work. Your achievement.",
     noteTitle: "Aiming higher.",
     noteSubtitle: "A clear plan for stronger work.",
@@ -121,7 +122,7 @@ export const siteContent = {
     title: "A stronger result starts with a clearer next step.",
     description:
       "Tell us what you’re studying and where you’re stuck—source use, AI rules, spelling or critical analysis. We’ll suggest a practical next step for your own work.",
-    promise: "Over a decade of support. Your progress and academic integrity come first.",
+    promise: "15 years of experience. Your progress and academic integrity come first.",
     email: "support@360scholar.org"
   },
   form: {
@@ -144,7 +145,7 @@ export const siteContent = {
     messagePlaceholder: "What would you like to make progress on?",
     submit: "Get my tailored plan",
     privacyNote:
-      "Your enquiry form does not create an account or store details on this site. It prepares an email that is sent only if you choose. Chat is provided by Tidio; see the privacy notice below. Session requests are confirmed by email, not booked automatically.",
+      "The website does not save form entries. Continuing opens WhatsApp or your email app; nothing is sent until you press Send there. Those services process information under their own terms.",
     directEmailLabel: "Prefer email? Write to us directly."
   },
   footer: {
@@ -152,6 +153,27 @@ export const siteContent = {
     publishingLink: "Explore scholarly publishing",
     copyright: "360 Scholar. All rights reserved.",
     note: "Research support that keeps your voice at the centre."
+  },
+  subjects: [
+    { name: "Business, management & accounting", areas: ["Business", "Management", "Accounting & finance", "Marketing", "Economics"] },
+    { name: "Law & social sciences", areas: ["Law", "Politics", "Sociology", "Psychology", "Social work"] },
+    { name: "Health & life sciences", areas: ["Nursing", "Public health", "Healthcare", "Biology", "Biomedical science"] },
+    { name: "Computing, data & engineering", areas: ["Computer science", "Data science", "Information systems", "Engineering", "Mathematics"] },
+    { name: "Arts, humanities & education", areas: ["Education", "English & literature", "History", "Media", "Arts & humanities"] },
+    { name: "Other subject", areas: ["Another subject — please describe it"] }
+  ],
+  studyLevels: ["Foundation or access", "Undergraduate", "Postgraduate taught / Master’s", "Doctoral", "Vocational or professional"],
+  pricing: {
+    kicker: "Clear before you commit",
+    title: "Straightforward session pricing.",
+    description: "Ask for a quote for any wider coaching or written feedback. We confirm the scope and total before you agree to proceed.",
+    freeThrough: "30 November 2026",
+    paidFrom: "1 December 2026",
+    freeOffer: "15-minute one-to-one advice session",
+    rate: "£10",
+    rateUnit: "per hour",
+    refund: "If you find no value in a paid advice conversation, we promise an immediate 50% refund.",
+    quoteNote: "Other support is priced around the agreed scope. No paid work starts without your agreement."
   },
   services: [
     {
@@ -190,21 +212,27 @@ export const siteContent = {
   steps: [
     {
       number: "01",
-      title: "Tell us where you are",
+      title: "Tell us what you need",
       description:
-        "Share your goals, questions and any deadlines. We will start by listening."
+        "Choose a support area, then share your subject, study level, question and deadline. A short summary is enough to begin."
     },
     {
       number: "02",
-      title: "Get a clear recommendation",
+      title: "Check fit, scope and price",
       description:
-        "We’ll suggest a focused session or support option for your goals. You choose whether to proceed."
+        "We confirm whether the request fits our available expertise, who would support you, what is included and the cost before you decide."
     },
     {
       number: "03",
-      title: "Leave with clear next steps",
+      title: "Work through it together",
       description:
-        "Take away practical actions you can apply to your own research or assessment."
+        "Meet for focused one-to-one guidance. You remain the author and make the academic decisions about your own work."
+    },
+    {
+      number: "04",
+      title: "Leave with next steps",
+      description:
+        "Agree practical actions and any follow-up before the session ends. Further support is always your choice."
     }
   ],
   faqs: [
@@ -237,6 +265,21 @@ export const siteContent = {
       question: "Can you guarantee I will pass or get a particular grade?",
       answer:
         "No one can guarantee a mark: your institution assesses your work. We can help you understand the criteria, improve your approach and catch avoidable issues, while you remain the author of what you submit."
+    },
+    {
+      question: "Can you help if my deadline is close?",
+      answer:
+        "Tell us the exact deadline and what is still unfinished. We will check availability and say honestly whether there is enough time to help. Please do not assume a rush request is accepted until we confirm it."
+    },
+    {
+      question: "How do revisions or follow-up work?",
+      answer:
+        "Before paid support begins, we agree what feedback or follow-up is included. Coaching is guidance rather than a rewritten submission. Any extra session or scope is discussed and priced before you choose to continue."
+    },
+    {
+      question: "What happens after I enquire?",
+      answer:
+        "We review the subject, level, support area and deadline you share, then reply with a fit check and a suggested next step. You can ask questions and decide whether to book; an enquiry does not commit you to paid work."
     }
   ]
 } as const;

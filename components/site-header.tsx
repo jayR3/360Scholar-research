@@ -32,6 +32,7 @@ export function SiteHeader() {
         <nav className={`primary-nav${menuOpen ? " nav-open" : ""}`} id="primary-nav" aria-label="Main navigation">
           <a href="#support" onClick={() => setMenuOpen(false)}>{siteContent.nav.support}</a>
           <a href="#approach" onClick={() => setMenuOpen(false)}>{siteContent.nav.approach}</a>
+          <a href="#pricing" onClick={() => setMenuOpen(false)}>{siteContent.nav.pricing}</a>
           <a href="#faq" onClick={() => setMenuOpen(false)}>{siteContent.nav.faq}</a>
           <a className="nav-secondary" href="https://www.360scholar.org/" target="_blank" rel="noreferrer">
             {siteContent.nav.publishing}

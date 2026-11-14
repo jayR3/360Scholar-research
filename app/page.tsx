@@ -2,6 +2,8 @@ import Image from "next/image";
 import { EnquiryForm } from "../components/enquiry-form";
 import { PromoBanner } from "../components/promo-banner";
 import { SiteHeader } from "../components/site-header";
+import { SupportFinder } from "../components/support-finder";
+import { TestimonialForm } from "../components/testimonial-form";
 import { siteContent } from "../site-content";
 
 export default function HomePage() {
@@ -46,12 +48,10 @@ export default function HomePage() {
               <div className="image-caption"><span className="caption-dot"></span>{siteContent.hero.imageCaption}</div>
             </div>
           </div>
-          <div className="hero-bottom container">
-            <span>{siteContent.hero.bottomOne}</span>
-            <span className="hero-bottom-line"></span>
-            <span>{siteContent.hero.bottomTwo}</span>
-            <span className="hero-bottom-line"></span>
-            <span>{siteContent.hero.bottomThree}</span>
+          <div className="hero-bottom container" aria-label="Our approach">
+            <span className="hero-promise-item">{siteContent.hero.bottomOne}</span>
+            <span className="hero-promise-item">{siteContent.hero.bottomTwo}</span>
+            <span className="hero-promise-item">{siteContent.hero.bottomThree}</span>
           </div>
         </section>
 
@@ -65,6 +65,8 @@ export default function HomePage() {
               <p className="section-intro">{siteContent.support.description}</p>
             </div>
 
+            <SupportFinder />
+
             <div className="services-grid">
               {siteContent.services.map((service) => (
                 <article className="service-card" key={service.number}>
@@ -75,6 +77,25 @@ export default function HomePage() {
                   <div className="service-detail">{service.detail} <span aria-hidden="true">↗</span></div>
                 </article>
               ))}
+            </div>
+            <div className="support-catalog" aria-labelledby="catalog-title">
+              <div className="catalog-intro">
+                <span className="catalog-label">A broad starting point</span>
+                <h3 id="catalog-title">Support by subject and study level</h3>
+                <p>Tell us your exact programme and question. We’ll confirm whether the right subject expertise is available before you book.</p>
+              </div>
+              <div className="subject-groups">
+                {siteContent.subjects.map((group) => (
+                  <div className="subject-group" key={group.name}>
+                    <h4>{group.name}</h4>
+                    <p>{group.areas.join(" · ")}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="study-levels">
+                <strong>Study levels</strong>
+                <p>{siteContent.studyLevels.join(" · ")}</p>
+              </div>
             </div>
             <div className="integrity-note">
               <span className="integrity-icon" aria-hidden="true">✳</span>
@@ -101,6 +122,19 @@ export default function HomePage() {
                 </article>
               ))}
             </div>
+            <aside className="coaching-example" aria-labelledby="example-title">
+              <div className="example-heading">
+                <span className="catalog-label">An illustrative example</span>
+                <span className="example-stamp">COACHING, NOT A SUBMISSION</span>
+              </div>
+              <h3 id="example-title">Turning “critically evaluate” into a workable plan</h3>
+              <div className="example-flow">
+                <div><span>01 · Clarify</span><p>Identify what the question asks you to judge and which criteria matter.</p></div>
+                <div><span>02 · Compare</span><p>Bring together evidence that supports different interpretations and note its limits.</p></div>
+                <div><span>03 · Build your view</span><p>Choose a reasoned position, then write the argument in your own words and cite your sources.</p></div>
+              </div>
+              <p className="example-note">This generic example shows the kind of thinking a coaching session can support. It is not a client sample or text to submit.</p>
+            </aside>
           </div>
         </section>
 
@@ -124,6 +158,63 @@ export default function HomePage() {
                 </article>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="pricing-section section-pad" id="pricing">
+          <div className="container pricing-layout">
+            <div className="pricing-copy">
+              <p className="eyebrow"><span className="eyebrow-rule"></span>{siteContent.pricing.kicker}</p>
+              <h2>{siteContent.pricing.title}</h2>
+              <p>{siteContent.pricing.description}</p>
+              <p className="pricing-quote-note">{siteContent.pricing.quoteNote}</p>
+              <a className="text-link" href="#contact">Ask for a tailored quote <span aria-hidden="true">↗</span></a>
+            </div>
+            <div className="price-card">
+              <div className="price-card-top"><span>ONE-TO-ONE ADVICE</span><span className="price-mark" aria-hidden="true">✳</span></div>
+              <h3>{siteContent.pricing.freeOffer}</h3>
+              <p className="price-timing">Available through {siteContent.pricing.freeThrough}</p>
+              <div className="price-divider"></div>
+              <p className="price-from">From {siteContent.pricing.paidFrom}</p>
+              <p className="price-amount"><strong>{siteContent.pricing.rate}</strong><span>{siteContent.pricing.rateUnit}</span></p>
+              <p className="refund-promise">{siteContent.pricing.refund}</p>
+              <a className="button button-primary" href="#contact">Request a session <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </section>
+
+        <section className="people-section section-pad" id="people">
+          <div className="container people-layout">
+            <div>
+              <p className="eyebrow"><span className="eyebrow-rule"></span>People before promises</p>
+              <h2>Know who you’ll speak with and what happens next.</h2>
+              <p>First, your enquiry is handled by our sales manager. Before a paid academic session, ask us to confirm who would support you, their relevant subject experience, the agreed scope and the price. We’ll check the fit before you decide.</p>
+              <a className="text-link" href="#contact">Ask about subject fit <span aria-hidden="true">↗</span></a>
+            </div>
+            <article className="manager-card">
+              <span className="manager-initials" aria-hidden="true">MA</span>
+              <span className="manager-role">YOUR FIRST POINT OF CONTACT</span>
+              <h3>Micheal Alabi</h3>
+              <p>Sales Manager</p>
+              <a href="https://wa.me/447535655738" target="_blank" rel="noreferrer">Message Micheal on WhatsApp <span aria-hidden="true">↗</span></a>
+              <small>Subject-specialist fit is confirmed for each enquiry; no academic credentials are implied by this contact role.</small>
+            </article>
+          </div>
+        </section>
+
+        <section className="feedback-section section-pad" id="feedback">
+          <div className="container feedback-layout">
+            <div className="feedback-copy">
+              <p className="eyebrow"><span className="eyebrow-rule"></span>Student feedback</p>
+              <h2>Tell us what helped.</h2>
+              <p>Share a written review, rate the person who supported you and tell us your study area. Feedback opens as a WhatsApp draft for you to review and send.</p>
+              <div className="feedback-note">
+                <strong>Your choice matters.</strong>
+                <span>We never publish a review automatically. You can leave publication permission unticked, and we’ll ask before using identifying details.</span>
+              </div>
+              <p className="video-note"><strong>Prefer video?</strong> Open WhatsApp from the form, then attach your video before sending. Please keep names, student IDs and assessment documents out of the recording.</p>
+            </div>
+            <TestimonialForm />
           </div>
         </section>
 
@@ -153,6 +244,12 @@ export default function HomePage() {
               <h2>{siteContent.contact.title}</h2>
               <p>{siteContent.contact.description}</p>
               <div className="contact-promise"><span aria-hidden="true">✳</span><span>{siteContent.contact.promise}</span></div>
+              <div className="contact-manager">
+                <span>Speak with</span>
+                <strong>Micheal Alabi <small>· Sales Manager</small></strong>
+                <a href="https://wa.me/447535655738" target="_blank" rel="noreferrer">WhatsApp 360 Scholar <span aria-hidden="true">↗</span></a>
+                <a className="contact-feedback-link" href="#feedback">Already worked with us? Rate your support <span aria-hidden="true">↗</span></a>
+              </div>
             </div>
             <EnquiryForm />
           </div>
