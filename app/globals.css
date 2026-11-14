@@ -98,7 +98,7 @@ h1 { max-width: 600px; margin-bottom: 22px; color: var(--brand); font-size: clam
 .section-heading h2 em { color: var(--teal); font-family: var(--serif); font-weight: 400; letter-spacing: -.05em; }
 .section-intro { max-width: 400px; margin: 0 0 4px; color: var(--muted); font-size: 14px; line-height: 1.9; }
 .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.service-card { position: relative; min-height: 323px; padding: 23px 23px 25px; border-right: 1px solid var(--line); transition: background .25s ease, transform .25s ease; }
+.service-card { position: relative; display: flex; flex-direction: column; min-height: 323px; padding: 23px 23px 25px; border-right: 1px solid var(--line); transition: background .25s ease, transform .25s ease; }
 .service-card:first-child { border-left: 1px solid var(--line); }
 .service-card:hover { z-index: 1; background: #f8f8f3; transform: translateY(-5px); }
 .service-card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
@@ -108,7 +108,7 @@ h1 { max-width: 600px; margin-bottom: 22px; color: var(--brand); font-size: clam
 .service-card h3 { margin: 17px 0 10px; color: var(--brand); font-size: 20px; font-weight: 600; letter-spacing: -.04em; line-height: 1.25; }
 .service-card:nth-child(2) h3 { font-size: 21px; font-weight: 700; }
 .service-card p { min-height: 66px; margin-bottom: 20px; color: #52625d; font-size: 13px; font-weight: 500; line-height: 1.75; }
-.service-detail { display: flex; justify-content: space-between; align-items: center; padding-top: 13px; border-top: 1px solid var(--line); color: var(--teal); font-size: 10px; font-weight: 700; }
+.service-detail { display: flex; margin-top: auto; justify-content: space-between; align-items: center; padding-top: 13px; border-top: 1px solid var(--line); color: var(--teal); font-size: 10px; font-weight: 700; }
 .integrity-note { display: flex; align-items: center; gap: 15px; margin-top: 24px; padding: 18px 21px; background: var(--paper); }
 .integrity-icon { color: var(--teal); font-size: 18px; }
 .integrity-note p { flex: 1; margin: 0; color: #52625d; font-size: 12px; font-weight: 500; line-height: 1.65; }
@@ -278,28 +278,68 @@ h1 { max-width: 600px; margin-bottom: 22px; color: var(--brand); font-size: clam
 }
 
 
-/* One-time promise strip: each phrase takes a turn, then settles into its normal layout. */
-.hero-bottom { gap: clamp(13px, 2vw, 25px); }
-.hero-promise-item { position: relative; display: inline-block; color: #42534f; text-align: center; transform-origin: center; animation-duration: 6s; animation-timing-function: ease-in-out; animation-fill-mode: none; }
+/* One-time, gradual phrase sequence. It returns to the resting design after one pass. */
+.hero-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 0;
+  margin-top: 40px;
+  color: #42534f;
+  font-size: 11px;
+  font-weight: 700;
+}
+.hero-promise-item {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 48px;
+  place-items: center;
+  padding: 7px 12px;
+  border-right: 1px solid #c9d1ca;
+  border-radius: 40px;
+  color: #42534f;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: .06em;
+  text-align: center;
+  text-transform: uppercase;
+  transform-origin: center;
+  animation-duration: 12s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: none;
+  will-change: transform, opacity;
+}
+.hero-promise-item:last-child { border-right: 0; }
 .hero-promise-item:nth-child(1) { animation-name: promise-first; }
 .hero-promise-item:nth-child(2) { animation-name: promise-second; }
 .hero-promise-item:nth-child(3) { animation-name: promise-third; }
-.hero-promise-item:not(:last-child)::after { display: inline-block; width: clamp(15px, 2.5vw, 32px); height: 1px; margin-left: clamp(13px, 2vw, 25px); vertical-align: middle; background: #c9d1ca; content: ""; }
 @keyframes promise-first {
-  0%, 32% { color: var(--brand); font-size: 13px; font-weight: 800; opacity: 1; transform: scale(1.08); }
-  33%, 98% { color: #64736f; font-size: 10px; font-weight: 500; opacity: .58; transform: scale(.91); }
-  100% { opacity: 1; transform: scale(1); }
+  0% { color: #42534f; background: transparent; font-weight: 700; opacity: 1; transform: scale(1); }
+  4%, 20% { color: var(--brand); background: rgba(14,138,138,.09); font-weight: 800; opacity: 1; transform: scale(1.26); box-shadow: 0 8px 24px rgba(11,31,58,.08); }
+  24% { color: #42534f; background: transparent; font-weight: 700; opacity: 1; transform: scale(1); box-shadow: none; }
+  29%, 95% { color: #6b7873; background: transparent; font-weight: 500; opacity: .48; transform: scale(.78); box-shadow: none; }
+  100% { color: #42534f; background: transparent; font-weight: 700; opacity: 1; transform: scale(1); box-shadow: none; }
 }
 @keyframes promise-second {
-  0%, 32% { color: #64736f; font-size: 10px; font-weight: 500; opacity: .58; transform: scale(.91); }
-  33%, 65% { color: var(--brand); font-size: 13px; font-weight: 800; opacity: 1; transform: scale(1.08); }
-  66%, 98% { color: #64736f; font-size: 10px; font-weight: 500; opacity: .58; transform: scale(.91); }
-  100% { opacity: 1; transform: scale(1); }
+  0% { color: #42534f; background: transparent; font-weight: 700; opacity: 1; transform: scale(1); }
+  4%, 24% { color: #6b7873; background: transparent; font-weight: 500; opacity: .48; transform: scale(.78); }
+  29% { color: #42534f; background: transparent; font-weight: 700; opacity: 1; transform: scale(1); }
+  33%, 49% { color: var(--brand); background: rgba(14,138,138,.09); font-weight: 800; opacity: 1; transform: scale(1.26); box-shadow: 0 8px 24px rgba(11,31,58,.08); }
+  53% { color: #42534f; background: transparent; font-weight: 700; opacity: 1; transform: scale(1); box-shadow: none; }
+  58%, 95% { color: #6b7873; background: transparent; font-weight: 500; opacity: .48; transform: scale(.78); box-shadow: none; }
+  100% { color: #42534f; background: transparent; font-weight: 700; opacity: 1; transform: scale(1); box-shadow: none; }
 }
 @keyframes promise-third {
-  0%, 65% { color: #64736f; font-size: 10px; font-weight: 500; opacity: .58; transform: scale(.91); }
-  66%, 98% { color: var(--brand); font-size: 13px; font-weight: 800; opacity: 1; transform: scale(1.08); }
-  100% { opacity: 1; transform: scale(1); }
+  0% { color: #42534f; background: transparent; font-weight: 700; opacity: 1; transform: scale(1); }
+  4%, 53% { color: #6b7873; background: transparent; font-weight: 500; opacity: .48; transform: scale(.78); }
+  58% { color: #42534f; background: transparent; font-weight: 700; opacity: 1; transform: scale(1); }
+  62%, 78% { color: var(--brand); background: rgba(14,138,138,.09); font-weight: 800; opacity: 1; transform: scale(1.26); box-shadow: 0 8px 24px rgba(11,31,58,.08); }
+  82% { color: #42534f; background: transparent; font-weight: 700; opacity: 1; transform: scale(1); box-shadow: none; }
+  87%, 95% { color: #6b7873; background: transparent; font-weight: 500; opacity: .48; transform: scale(.78); box-shadow: none; }
+  100% { color: #42534f; background: transparent; font-weight: 700; opacity: 1; transform: scale(1); box-shadow: none; }
 }
 .hero-points { gap: 16px 24px; color: #52635f; font-size: 13px; }
 .hero-points span { gap: 9px; }
@@ -430,24 +470,8 @@ h1 { max-width: 600px; margin-bottom: 22px; color: var(--brand); font-size: clam
 @media (max-width: 760px) {
   .hero-points { font-size: 13px; }
   .hero-points span:first-child { font-size: 14px; }
-  .hero-bottom { justify-content: center; gap: 11px; }
-  .hero-promise-item { font-size: 9px; letter-spacing: .04em; }
-  @keyframes promise-first {
-    0%, 32% { color: var(--brand); font-size: 11px; font-weight: 800; opacity: 1; transform: scale(1.05); }
-    33%, 98% { color: #64736f; font-size: 8px; font-weight: 500; opacity: .58; transform: scale(.93); }
-    100% { opacity: 1; transform: scale(1); }
-  }
-  @keyframes promise-second {
-    0%, 32% { color: #64736f; font-size: 8px; font-weight: 500; opacity: .58; transform: scale(.93); }
-    33%, 65% { color: var(--brand); font-size: 11px; font-weight: 800; opacity: 1; transform: scale(1.05); }
-    66%, 98% { color: #64736f; font-size: 8px; font-weight: 500; opacity: .58; transform: scale(.93); }
-    100% { opacity: 1; transform: scale(1); }
-  }
-  @keyframes promise-third {
-    0%, 65% { color: #64736f; font-size: 8px; font-weight: 500; opacity: .58; transform: scale(.93); }
-    66%, 98% { color: var(--brand); font-size: 11px; font-weight: 800; opacity: 1; transform: scale(1.05); }
-    100% { opacity: 1; transform: scale(1); }
-  }
+  .hero-bottom { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px; }
+  .hero-promise-item { min-height: 42px; padding: 6px 8px; font-size: 9px; letter-spacing: .035em; }
   .support-finder { gap: 17px; padding: 18px; }
   .support-choices { grid-template-columns: 1fr; }
   .support-catalog { gap: 17px; padding: 19px; }
@@ -460,9 +484,9 @@ h1 { max-width: 600px; margin-bottom: 22px; color: var(--brand); font-size: clam
   .testimonial-form { padding: 21px; }
 }
 @media (max-width: 430px) {
-  .hero-bottom { justify-content: space-between; gap: 8px; }
-  .hero-promise-item { flex: 1 1 28%; max-width: 33%; font-size: 8px; line-height: 1.4; }
-  .hero-promise-item:not(:last-child)::after { display: none; }
+  .hero-bottom { grid-template-columns: 1fr; margin-top: 22px; }
+  .hero-promise-item { min-height: 34px; padding: 5px 8px; border-right: 0; border-bottom: 1px solid #d9e0dc; font-size: 9px; letter-spacing: .05em; }
+  .hero-promise-item:last-child { border-bottom: 0; }
   .support-catalog .subject-groups { grid-template-columns: 1fr; }
   .testimonial-form-heading { align-items: flex-start; flex-direction: column; gap: 4px; }
   .manager-card { padding: 22px; }
